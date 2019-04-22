@@ -14,14 +14,14 @@ dfInject = dfInject.select("brand", "img", "price", "rating", "review", "time").
 # Initialise variables
 username = "<USER_EMAIL>"
 password = "<USER_PASSWORD>"
-application_id = "********-****-****-****-************"  # Power BI application ID
-groupId = "********-****-****-****-************"  # Set to None if not using Power BI groups
+applicationId = "********-****-****-****-************"  # Power BI application ID
+groupId = None  # Set to None if not using Power BI groups
 datasetName = "InjectedDataset"  # The name of the Power BI dataset
-tableNames = ["AmazonReviews"]  # Tables name or list of table names
+tableNames = ["AmazonReviews"]  # Table name or list of table names
 dataFrames = [dfInject]  # DataFrame name or list of DataFrame names
 
 # Create a pbiDatasetAPI class instance
-pbi = pbiDatasetAPI(username, password, application_id)
+pbi = pbiDatasetAPI(username, password, applicationId)
 
 # COMMAND ----------
 
